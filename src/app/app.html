@@ -1,1 +1,22 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<!-- Generar el menu -->
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="morado">
+            <ion-title>Páginas</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="abrirPagina(tabs)">
+                Abrir Tabs
+            </button>
+            <button ion-item (click)="abrirPagina(ajustes2)">
+                Abrir Ajustes 2
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<!-- Le indicamos al menu cual sera el root a mostrar cuando seleccionemos una opcion -->
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

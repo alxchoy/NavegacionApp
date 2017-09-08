@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+
+    <ion-title>Ajustes</ion-title>
+    
+    <!-- Al igual que con otras acciones, el toogle del menu tambien se puede hacer sin funcion, directamente en el html con la propiedad menuToggle -->
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button block (click)="activarPrincipal()">Activar principal</button>
+
+  <button ion-button block color="morado" (click)="mostrarModal()">
+    Mostrar modal
+  </button>
+
+</ion-content>

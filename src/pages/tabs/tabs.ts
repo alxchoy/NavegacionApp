@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+
+// Necesitamos importar la páginas a donde nos enviará cada Tab
+import { PrincipalPage, AjustesPage } from '../index.paginas';
+
+@Component({
+  selector: 'page-tabs',
+  templateUrl: 'tabs.html',
+})
+export class TabsPage {
+  
+  tab1:any;
+  tab2:any;
+
+  constructor() {
+    this.tab1 = PrincipalPage;
+    this.tab2 = AjustesPage;
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad TabsPage');
+  }
+
+}

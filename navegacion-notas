@@ -1,0 +1,37 @@
+- Al igual que en angular, en ionic podemos crear paginas (que son las pantallas a mostrar en la app) con el CLI de ionic:
+  ionic generate page principal
+
+- También podemos crear una pagina sin necesidad del CLI, sólo hay que crear la carpeta con el nombre y poner los archivos respectivos (html, ts).
+
+- El ionic cli no importa las paginas creadas en el app.module, hay que hacerlo manualmente y colocarlo en declarations y entry components.
+
+- Para asignar una nueva página como root debemos de indicarlo en el app.component.ts, importar dicha páginma y declararla como root.
+
+- Hay 2 maneras de navegar entre pagina: mediante la funcion (click)="" indicando una funcion que haga el cambio de pagina y mediante [navPush]
+  igualando a una variable que almacena la pagina a donde se mandará.
+
+- Para enviar parámetros entre páginas necesitamos tener el módulo NavParams, además en la función push() se envía como primer parámetro la página
+  a donde se navegará y como segundo parámetro un objeto con los valores que se pasarán entre páginas.
+
+- Al igual que se puede navegar entre páginas mediante una función indicando el metodo push() y directamente en el HTML con [navPush], también se
+  pueden enviar datos entre páginas de las dos formas.
+
+- Considerar que push() es para poner una página sobre otra y pop() es para eliminar la primera que este arriba, todo funciona como un apilamiento
+  en donde push() coloca una pagina encima y pop() quita la que este arriba.
+
+- Al igual que push() y [navPush] navegamos hacia adenlante en las pantallas, con pop() popToRoot() y navPop podemos navegar hacia atrás. El navPop no
+  necesita llaves.
+
+- Para la creación de Tabs se debe colocar como root la página de Tabs.
+
+- Si queremos que por defecto haya un tab específico seleccionado, podemos usar la propiedad "selectedIndex='indice'" en la etiqueta ion-tabs.
+
+- También podemos navegar de una página a un Tab específico con el método this.navCtrl.parent.select(indice).
+
+- Para trabajar con el menú: abrirlo, cerrarlo o hacer ambas(toogle) se debe trabajar con el MenuController e importarlo.
+
+- Para hacer el toogle del menu podemos usar una funcion en la directiva (click) o simplemente usar la propiedad "menuToogle" en el html, la diferencia
+  podría radicar en que al hacer mediante función puedes añadir otras instrucciones que solo un toogle.
+
+- Podemos hacer modificaciones de configuración a nuestra app en "app.modules.ts", para saber que tipos de cambios hacer revisemos la documentación
+  del framework, en APIS y configuraciones.
